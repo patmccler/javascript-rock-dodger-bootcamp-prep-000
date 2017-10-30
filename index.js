@@ -107,7 +107,7 @@ function createRock(x) {
      * we should remove the rock from the DOM
      */
      if(positionToInteger(rock.style.top) >= 360) {
-       rock.remove()
+       //rock.remove()
      }
   }
 
