@@ -90,15 +90,15 @@ function createRock(x) {
      */
      if(rock.style.top > 0) {
        var top = rock.style.top
- 
+
        function step() {
          rock.style.top = `${top -= 2}px`
- 
+
          if (top >= 0) {
            window.requestAnimationFrame(step)
          }
        }
- 
+
        window.requestAnimationFrame(step)
       }
     /**
