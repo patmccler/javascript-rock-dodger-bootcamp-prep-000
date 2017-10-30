@@ -70,7 +70,7 @@ function createRock(x) {
    * it to GAME and move it downwards.
    */
    $(#game).append(rock)
-   
+
   /**
    * This function moves the rock. (2 pixels at a time
    * seems like a good pace.)
