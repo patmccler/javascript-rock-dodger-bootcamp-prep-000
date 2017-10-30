@@ -89,12 +89,12 @@ function createRock(x) {
      * the GAME, we want to move it again.
      */
      if(rock.style.top < 360) {
-       var top = positionToInteger(rock.style.top)
+       var top = 0
 
        function step() {
          rock.style.top = `${top += 2}px`
 
-         if (positionToInteger(rock.style.top) < 360) {
+         if (top < 360) {
            window.requestAnimationFrame(step)
          }
        }
