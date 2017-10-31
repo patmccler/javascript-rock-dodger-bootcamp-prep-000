@@ -51,6 +51,7 @@ function checkCollision(rock) {
                *    and the rock's right edge is > the DODGER's right edge
                */) {
       alert("OOPS")
+      rock.style.color = "red"
       return true
     }
   }
