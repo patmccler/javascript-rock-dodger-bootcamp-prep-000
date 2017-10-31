@@ -41,8 +41,8 @@ function checkCollision(rock) {
       || (rockLeftEdge >= dodgerLeftEdge && rockRightEdge <= dodgerRightEdge)
       || (rockLeftEdge < dodgerRightEdge && rockRightEdge > dodgerRightEdge)
       {
-      alert("OOPS")
-      rock.style.color = "red"
+      //alert("OOPS")
+      //rock.style.color = "red"
       return true
     }
   }
@@ -88,7 +88,7 @@ function createRock(x) {
        function step() {
          rock.style.top = `${top += 2}px`
 
-        
+
 
          if (top < GAME_HEIGHT) {
            if(checkCollision(rock)) {
