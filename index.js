@@ -166,7 +166,7 @@ function moveDodgerLeft() {
    * (mabye 4 pixels?). Use window.requestAnimationFrame()!
    */
 function step() {
-  DODGER.style.left = `${positionToInteger(DODGER.style.left) - 4}px`
+  DODGER.style.left = `${positionToInteger(DODGER.style.left) - DODGER_STEP_SIZE}px`
 }
 
 if(positionToInteger(DODGER.style.left) <= DODGER_STEP_SIZE) {
@@ -181,7 +181,7 @@ function moveDodgerRight() {
   function step() {
     DODGER.style.left = `${positionToInteger(DODGER.style.left) + DODGER_STEP_SIZE}px`
   }
-  
+
   if(positionToInteger(DODGER.style.right) >= GAME_WIDTH - DODGER_STEP_SIZE) {
     DODGER.style.right = `${GAME_WIDTH}px`
   }
