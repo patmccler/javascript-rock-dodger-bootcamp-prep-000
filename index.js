@@ -136,6 +136,7 @@ function endGame() {
   }
   window.removeEventListener('keydown', moveDodger)
   ROCKS = []
+  clearInterval(gameInterval)
 }
 
 function moveDodger(e) {
