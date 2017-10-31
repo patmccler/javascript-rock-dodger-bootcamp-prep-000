@@ -132,7 +132,7 @@ function endGame() {
   for (var i = 0; i < ROCKS.length; i++)
   {
     GAME.removeChild(ROCKS[i])
-    ROCKS.splice(i,1)
+    ROCKS[i].remove()
   }
   window.removeEventListener('keydown', moveDodger)
 }
