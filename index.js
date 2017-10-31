@@ -131,6 +131,7 @@ function endGame() {
   for (var i = 0; i < ROCKS.length; i++)
   {
     GAME.removeChild(ROCKS[i])
+    ROCKS.splice(i,1)
   }
   window.removeEventListener('keydown', moveDodger)
 }
