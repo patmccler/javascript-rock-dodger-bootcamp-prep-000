@@ -79,8 +79,7 @@ function createRock(x) {
     }
 
     function step() {
-      var top = positionToInteger(rock.style.top)
-      rock.style.top = `${top + 2}px`
+      rock.style.top = `${positionToInteger(rock.style.top) + 2}px`
 
     }
 
