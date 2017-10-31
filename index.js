@@ -70,8 +70,6 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock(rock) {
-    var top = positionToInteger(rock.style.top)
-    rock.style.top = `${top += 2}px`
     /**
      * If a rock collides with the DODGER,
      * we should call endGame()
@@ -80,19 +78,18 @@ function createRock(x) {
       endGame()
     }
 
+    function step() {
+      var top = positionToInteger(rock.style.top)
+      rock.style.top = `${top += 2}px`
+      
+    }
+
     /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
      */
      if(positionToInteger(rock.style.top) < GAME_HEIGHT) {
-
-
-       //function step() {
-        // rock.style.top = `${top += 2}px`
-        // }
-
        window.requestAnimationFrame(moveRock(rock))
-
       }
 
     /**
