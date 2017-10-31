@@ -81,7 +81,7 @@ function createRock(x) {
     function step() {
       var top = positionToInteger(rock.style.top)
       rock.style.top = `${top += 2}px`
-      
+
     }
 
     /**
@@ -89,7 +89,7 @@ function createRock(x) {
      * the GAME, we want to move it again.
      */
      if(positionToInteger(rock.style.top) < GAME_HEIGHT) {
-       window.requestAnimationFrame(moveRock(rock))
+       window.requestAnimationFrame(step)
       }
 
     /**
