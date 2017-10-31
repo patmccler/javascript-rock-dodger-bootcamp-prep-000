@@ -168,7 +168,7 @@ function step() {
   DODGER.style.left = `${positionToInteger(DODGER.style.left) + 2}px`
 }
 
-   window.requestAnimationFrame()
+   window.requestAnimationFrame(step)
 }
 
 function moveDodgerRight() {
