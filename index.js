@@ -88,7 +88,7 @@ function createRock(x) {
        //function step() {
          rock.style.top = `${top += 2}px`
         // }
-       
+
 
        window.requestAnimationFrame(moveRock(rock))
       }
@@ -103,7 +103,7 @@ function createRock(x) {
   }
 
   // We should kick off the animation of the rock around here
-  moveRock(rock)
+  window.requestAnimationFrame(moveRock(rock))
   // Add the rock to ROCKS so that we can remove all rocks
   // when there's a collision
   ROCKS.push(rock)
@@ -129,7 +129,6 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  // implement me!
   /**
    * This function should call `moveDodgerLeft()`
    * if the left arrow is pressed and `moveDodgerRight()`
