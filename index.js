@@ -9,6 +9,7 @@ const LEFT_ARROW = 37 // use e.which!
 const RIGHT_ARROW = 39 // use e.which!
 const ROCKS = []
 const START = document.getElementById('start')
+const DODGER_STEP_SIZE = 4
 
 var gameInterval = null
 
@@ -173,10 +174,14 @@ function step() {
 
 function moveDodgerRight() {
   function step() {
-    DODGER.style.left = `${positionToInteger(DODGER.style.left) + 4}px`
+    DODGER.style.left = `${positionToInteger(DODGER.style.left) + DODGER_STEP_SIZE}px`
   }
-
+  if(positionToInteger(DODGER.style.left) <= DODGER_STEP_SIZE) {
+    DODGER.style.left = '0px'
+  }
+  else {
      window.requestAnimationFrame(step)
+   }
 }
 
 /**
