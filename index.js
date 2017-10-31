@@ -182,7 +182,7 @@ function moveDodgerRight() {
     DODGER.style.left = `${positionToInteger(DODGER.style.left) + DODGER_STEP_SIZE}px`
   }
 
-  if(positionToInteger(DODGER.style.left) >= GAME_WIDTH - 20 - DODGER_STEP_SIZE - 1) {
+  if(positionToInteger(DODGER.style.left) >= 360) {
     DODGER.style.right = `${GAME_WIDTH}px`
   }
   else {
