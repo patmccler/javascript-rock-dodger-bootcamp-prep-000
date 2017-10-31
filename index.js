@@ -169,15 +169,21 @@ function step() {
   DODGER.style.left = `${positionToInteger(DODGER.style.left) - 4}px`
 }
 
+if(positionToInteger(DODGER.style.left) <= DODGER_STEP_SIZE) {
+  DODGER.style.left = `0px`
+}
+else {
    window.requestAnimationFrame(step)
+ }
 }
 
 function moveDodgerRight() {
   function step() {
     DODGER.style.left = `${positionToInteger(DODGER.style.left) + DODGER_STEP_SIZE}px`
   }
-  if(positionToInteger(DODGER.style.left) <= DODGER_STEP_SIZE) {
-    DODGER.style.left = '0px'
+  
+  if(positionToInteger(DODGER.style.right) >= GAME_WIDTH - DODGER_STEP_SIZE) {
+    DODGER.style.right = `${GAME_WIDTH}px`
   }
   else {
      window.requestAnimationFrame(step)
