@@ -88,12 +88,13 @@ function createRock(x) {
        function step() {
          rock.style.top = `${top += 2}px`
 
-         if(checkCollision(rock)) {
-           //endGame()
-           //break
-         }
+        
 
          if (top < GAME_HEIGHT) {
+           if(checkCollision(rock)) {
+             endGame()
+             break
+           }
            window.requestAnimationFrame(step)
          }
        }
