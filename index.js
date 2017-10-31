@@ -85,19 +85,10 @@ function createRock(x) {
      if(positionToInteger(rock.style.top) < GAME_HEIGHT) {
        var top = positionToInteger(rock.style.top)
 
-       function step() {
+       //function step() {
          rock.style.top = `${top += 2}px`
-
-
-
-         if (top < GAME_HEIGHT) {
-           if(checkCollision(rock)) {
-             endGame()
-             break
-           }
-           //window.requestAnimationFrame(step)
-         }
-       }
+        // }
+       
 
        window.requestAnimationFrame(moveRock(rock))
       }
