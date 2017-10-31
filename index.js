@@ -132,7 +132,7 @@ function endGame() {
   {
     Game.removeChild(ROCKS[i])
   }
-  window.removeEventListener('keydown', moveDodger)
+  window.removeEventListener('keydown', moveDodger(e))
 }
 
 function moveDodger(e) {
