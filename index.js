@@ -89,7 +89,6 @@ function createRock(x) {
      */
      if(positionToInteger(rock.style.top) < GAME_HEIGHT) {
        window.requestAnimationFrame(step)
-       moveRock(rock)
       }
 
     /**
