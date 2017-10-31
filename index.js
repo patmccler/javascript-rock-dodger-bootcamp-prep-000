@@ -135,6 +135,7 @@ function endGame() {
     ROCKS[i].remove()
   }
   window.removeEventListener('keydown', moveDodger)
+  ROCKS = []
 }
 
 function moveDodger(e) {
